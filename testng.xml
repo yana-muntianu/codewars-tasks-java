@@ -1,0 +1,8 @@
+<suite name="CodeWars Tasks Java">
+
+    <test name="Count Vector 3D Length">
+        <classes><class name="codewars.tasks.java.Vector3DTest" />;
+        </classes>
+    </test>
+
+</suite>
