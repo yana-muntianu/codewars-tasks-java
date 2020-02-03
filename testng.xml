@@ -5,4 +5,9 @@
         </classes>
     </test>
 
+    <test name="Count block volume and surface area">
+        <classes><class name="codewars.tasks.java.BlockTest" />;
+        </classes>
+    </test>
+
 </suite>
