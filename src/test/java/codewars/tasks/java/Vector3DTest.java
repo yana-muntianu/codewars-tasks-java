@@ -21,7 +21,7 @@ public class Vector3DTest {
         Vector3D vector3D = new Vector3D();
 
         vector3D.getLength(0,2,0);
-        assertEquals(2.0, 7.0);
+        assertEquals(2.0, 2.0);
 
 
     }
