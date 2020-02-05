@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 
 public class Vector3DTest {
+
     @BeforeClass
     public void testSetUp(){
         System.out.println("Running TestNG");

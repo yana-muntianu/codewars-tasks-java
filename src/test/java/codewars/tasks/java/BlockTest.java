@@ -3,6 +3,7 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 
 public class BlockTest {
+
     @Test
         public void testBasicBlock() throws Exception {
             Block b = new Block(new int[]{2,2,2});
