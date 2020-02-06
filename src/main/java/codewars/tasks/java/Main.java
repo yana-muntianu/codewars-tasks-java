@@ -4,6 +4,7 @@ package codewars.tasks.java;
 public class Main {
 
     public static void main (String [] args){
+
         /**
          * This method counts length of a vector with given params
          */
