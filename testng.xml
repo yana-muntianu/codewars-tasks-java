@@ -1,0 +1,13 @@
+<suite name="CodeWars Tasks Java">
+
+    <test name="Count Vector 3D Length">
+        <classes><class name="codewars.tasks.java.Vector3DTest" />;
+        </classes>
+    </test>
+
+    <test name="Count block volume and surface area">
+        <classes><class name="codewars.tasks.java.BlockTest" />;
+        </classes>
+    </test>
+
+</suite>
