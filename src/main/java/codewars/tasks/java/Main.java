@@ -8,9 +8,6 @@ public class Main {
         vector.getLength(0,2,0);
 
         Block block = new Block(new int[]{1,2,4});
-        int length = block.getLength();
-        int height = block.getHeight();
-        int width = block.getWidth();
         int volume = block.getVolume();
         int surfaceArea = block.getSurfaceArea();
 
