@@ -7,5 +7,9 @@ public class Main {
         Vector3D vector = new Vector3D();
         vector.getLength(0,2,0);
 
+        Block block = new Block(new int[]{1,2,4});
+        int volume = block.getVolume();
+        int surfaceArea = block.getSurfaceArea();
+
     }
 }
