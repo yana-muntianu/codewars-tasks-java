@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 
 public class Vector3DTest {
+
     @BeforeClass
     public void testSetUp(){
         System.out.println("Running TestNG");
@@ -15,7 +16,7 @@ public class Vector3DTest {
         System.out.println("Stopping TestNG");
     }
 
-    @Test
+    @Test (testName = "1", description = "Verify Vector 3D method")
     public void countVectorLength(){
         System.out.println("@Test - countVectorLength");
         Vector3D vector3D = new Vector3D();

@@ -5,11 +5,14 @@
         </classes>
     </test>
 
-
     <test name="Count block volume and surface area">
         <classes><class name="codewars.tasks.java.BlockTest" />;
         </classes>
     </test>
 
+    <test name="Detect leap years">
+        <classes><class name="codewars.tasks.java.LeapYearsTest" />;
+        </classes>
+    </test>
 
 </suite>
