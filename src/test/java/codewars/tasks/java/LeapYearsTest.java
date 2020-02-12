@@ -5,7 +5,7 @@ import static org.testng.Assert.*;
 
 public class LeapYearsTest {
 
-    @Test
+    @Test (testName = "3", description = "Verify Leap Year method")
     public void testIsYearLeap(){
         System.out.println("@Test - testIsYearLeap");
         LeapYears isYearLeap = new LeapYears();

@@ -16,7 +16,7 @@ public class Vector3DTest {
         System.out.println("Stopping TestNG");
     }
 
-    @Test
+    @Test (testName = "1", description = "Verify Vector 3D method")
     public void countVectorLength(){
         System.out.println("@Test - countVectorLength");
         Vector3D vector3D = new Vector3D();
