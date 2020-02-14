@@ -1,4 +1,4 @@
-package codewars.tasks.java;
+package codewars.tasks.java.block;
 
 public class Block {
 
@@ -6,7 +6,7 @@ public class Block {
     private int length;
     private int height;
 
-    Block(int[] measurements) {
+    public Block(int[] measurements) {
         if(measurements.length == 3) {
             this.width = measurements[0];
             this.length = measurements[1];
