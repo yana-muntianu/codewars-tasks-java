@@ -15,4 +15,9 @@
         </classes>
     </test>
 
+    <test name="Declare winner within fighters">
+        <classes><class name="codewars.tasks.java.BattleTest" />;
+        </classes>
+    </test>
+
 </suite>

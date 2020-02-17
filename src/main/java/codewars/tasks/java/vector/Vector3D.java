@@ -1,4 +1,4 @@
-package codewars.tasks.java;
+package codewars.tasks.java.vector;
 
 public class Vector3D {
     /**

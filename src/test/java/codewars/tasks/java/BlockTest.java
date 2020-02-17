@@ -1,4 +1,5 @@
 package codewars.tasks.java;
+import codewars.tasks.java.block.Block;
 import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 
