@@ -20,4 +20,9 @@
         </classes>
     </test>
 
+    <test name="Count bored score for office teams">
+        <classes><class name="codewars.tasks.java.TheOfficeTest" />;
+        </classes>
+    </test>
+
 </suite>
