@@ -1,6 +1,7 @@
 package codewars.tasks.java;
 
 
+import codewars.tasks.java.arithmeticFunction.ArithmeticFunction;
 import codewars.tasks.java.battle.Battle;
 import codewars.tasks.java.battle.Fighter;
 import codewars.tasks.java.block.Block;
@@ -24,6 +25,7 @@ public class Main {
         Battle.declareWinner(new Fighter("Lew", 10, 2),
                 new Fighter("Harry", 5, 4), "Lew");
 
+        ArithmeticFunction function = new ArithmeticFunction();
 
     }
 }

@@ -20,4 +20,9 @@
         </classes>
     </test>
 
+    <test name="Make arithmetic function when the name of function given">
+        <classes><class name="codewars.tasks.java.ArithmeticFunctionTest" />;
+        </classes>
+    </test>
+
 </suite>
