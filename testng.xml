@@ -20,4 +20,9 @@
         </classes>
     </test>
 
+    <test name="Check if all string rotations exist in the array given ">
+        <classes><class name="codewars.tasks.java.RotationsTest" />;
+        </classes>
+    </test>
+
 </suite>
