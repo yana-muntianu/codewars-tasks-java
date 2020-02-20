@@ -4,6 +4,7 @@ package codewars.tasks.java;
 import codewars.tasks.java.battle.Battle;
 import codewars.tasks.java.battle.Fighter;
 import codewars.tasks.java.block.Block;
+import codewars.tasks.java.clock.FizzBuzzCuckooClock;
 import codewars.tasks.java.leapYears.LeapYears;
 import codewars.tasks.java.vector.Vector3D;
 
@@ -24,6 +25,7 @@ public class Main {
         Battle.declareWinner(new Fighter("Lew", 10, 2),
                 new Fighter("Harry", 5, 4), "Lew");
 
+        FizzBuzzCuckooClock clock = new FizzBuzzCuckooClock();
 
     }
 }

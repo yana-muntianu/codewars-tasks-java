@@ -20,4 +20,9 @@
         </classes>
     </test>
 
+    <test name="Make Cuckoo clock">
+        <classes><class name="codewars.tasks.java.ClockTest" />;
+        </classes>
+    </test>
+
 </suite>
