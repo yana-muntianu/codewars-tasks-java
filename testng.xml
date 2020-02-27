@@ -25,4 +25,9 @@
         </classes>
     </test>
 
+    <test name="Analyze lowest temperature">
+        <classes><class name="codewars.tasks.java.TemperatureAnalysisTest" />;
+        </classes>
+    </test>
+
 </suite>
