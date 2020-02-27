@@ -1,10 +1,10 @@
 package codewars.tasks.java;
 
 
+import codewars.tasks.java.arithmeticFunction.ArithmeticFunction;
 import codewars.tasks.java.battle.Battle;
 import codewars.tasks.java.battle.Fighter;
 import codewars.tasks.java.block.Block;
-import codewars.tasks.java.dictionary.Dictionary;
 import codewars.tasks.java.leapYears.LeapYears;
 import codewars.tasks.java.vector.Vector3D;
 
@@ -25,11 +25,7 @@ public class Main {
         Battle.declareWinner(new Fighter("Lew", 10, 2),
                 new Fighter("Harry", 5, 4), "Lew");
 
-        Dictionary d = new Dictionary();
-//        d.newEntry("Apple", "A fruit that grows on trees");
-        System.out.println(d.look("Ball"));
-
-
+        ArithmeticFunction function = new ArithmeticFunction();
 
     }
 }
