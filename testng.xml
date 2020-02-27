@@ -20,4 +20,24 @@
         </classes>
     </test>
 
+    <test name="Get initials from the full name">
+        <classes><class name="codewars.tasks.java.InitialsTest" />;
+        </classes>
+    </test>
+
+    <test name="Analyze lowest temperature">
+        <classes><class name="codewars.tasks.java.TemperatureAnalysisTest" />;
+        </classes>
+    </test>
+
+    <test name="Make arithmetic function when the name of function given">
+        <classes><class name="codewars.tasks.java.ArithmeticFunctionTest" />;
+        </classes>
+    </test>
+
+    <test name="Create an interactive dictionary">
+        <classes><class name="codewars.tasks.java.DictionaryTest" />;
+        </classes>
+    </test>
+
 </suite>
