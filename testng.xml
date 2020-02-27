@@ -20,6 +20,11 @@
         </classes>
     </test>
 
+    <test name="Get initials from the full name">
+        <classes><class name="codewars.tasks.java.InitialsTest" />;
+        </classes>
+    </test>
+
     <test name="Analyze lowest temperature">
         <classes><class name="codewars.tasks.java.TemperatureAnalysisTest" />;
         </classes>
