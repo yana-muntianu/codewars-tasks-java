@@ -5,38 +5,45 @@ import java.util.List;
 
 public class Rotations {
 
-    public static boolean containAllRots(String string, List<String> arr) {
+    public static boolean containAllRots(String strng, List<String> arr) {
 
         /*
-        copy the second part of the string in the temporary string and then
-        copy the first part of the original string to the temporary string.
+        Input:
+        - a string strng
+        - an array of strings arr
+        Output of function contain_all_rots(strng, arr) (or containAllRots or contain-all-rots):
+        a boolean true if all rotations of strng are included in arr (C returns 1)
+        false otherwise (C returns 0)
          */
+
         boolean isAllRots = false;
-        int n = string.length();
-        List<String> retval = new ArrayList<>();
+        int n = strng.length();
+        List<String> rotations = new ArrayList<>();
 
-        if (!string.isEmpty()){
-            for(int i=0; i<n; i++){
+        if (!strng.isEmpty() && !arr.isEmpty()) {
+
+            for (int i = 0; i < n; i++) {
                 StringBuilder sb = new StringBuilder();
-                for(int j=i+1; j<n; j++)
-                    sb.append(string.charAt(j));
-                for(int k=0; k<=i; k++)
-                    sb.append(string.charAt(k));
-                retval.add(sb.toString());
+                for (int j = i + 1; j < n; j++)
+                    sb.append(strng.charAt(j));
+                for (int k = 0; k <= i; k++)
+                    sb.append(strng.charAt(k));
+                rotations.add(sb.toString());
             }
-        }else if (!arr.isEmpty()){
-            for (String element:retval
-                 ) {
-                if (!arr.contains(element)){
-                    isAllRots = false;
+
+            for (int p = 0; p < rotations.size(); p++) {
+                int finalP = p;
+                isAllRots = arr.stream().anyMatch(x -> x.equals(rotations.get(finalP)));
+                if (!isAllRots) {
                     break;
-                }else isAllRots = true;
+                }
             }
-
-        }else
-             isAllRots = true;
+        }else if (strng.isEmpty()){
+            isAllRots = true;
+        }else {
+            isAllRots = true;
+        }
         System.out.println(isAllRots);
-
         return isAllRots;
     }
 }
