@@ -5,11 +5,54 @@
         </classes>
     </test>
 
-
     <test name="Count block volume and surface area">
         <classes><class name="codewars.tasks.java.BlockTest" />;
         </classes>
     </test>
 
+    <test name="Detect leap years">
+        <classes><class name="codewars.tasks.java.LeapYearsTest" />;
+        </classes>
+    </test>
+
+    <test name="Declare winner within fighters">
+        <classes><class name="codewars.tasks.java.BattleTest" />;
+        </classes>
+    </test>
+
+    <test name="Get initials from the full name">
+        <classes><class name="codewars.tasks.java.InitialsTest" />;
+        </classes>
+    </test>
+
+    <test name="Analyze lowest temperature">
+        <classes><class name="codewars.tasks.java.TemperatureAnalysisTest" />;
+        </classes>
+    </test>
+
+    <test name="Make arithmetic function when the name of function given">
+        <classes><class name="codewars.tasks.java.ArithmeticFunctionTest" />;
+        </classes>
+    </test>
+
+    <test name="Create an interactive dictionary">
+        <classes><class name="codewars.tasks.java.DictionaryTest" />;
+        </classes>
+    </test>
+
+    <test name="Count bored score for office teams">
+        <classes><class name="codewars.tasks.java.TheOfficeTest" />;
+        </classes>
+    </test>
+
+    <test name="Make Cuckoo clock">
+        <classes><class name="codewars.tasks.java.ClockTest" />;
+        </classes>
+    </test>
+
+    <test name="Check if all string rotations exist in the array given ">
+        <classes><class name="codewars.tasks.java.RotationsTest" />;
+        </classes>
+    </test>
 
 </suite>

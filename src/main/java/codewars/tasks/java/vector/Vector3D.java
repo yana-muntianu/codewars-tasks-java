@@ -1,7 +1,9 @@
-package codewars.tasks.java;
+package codewars.tasks.java.vector;
 
 public class Vector3D {
-
+    /**
+     * This method counts length of a vector with given params
+     */
     public double Length;
 
     public double getLength(double X, double Y, double Z){
