@@ -1,4 +1,4 @@
-package codewars.tasks.java.getInitials;
+package codewars.tasks.java.getinitials;
 
 public class GetInitials {
 

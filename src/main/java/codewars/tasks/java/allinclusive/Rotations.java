@@ -1,4 +1,4 @@
-package codewars.tasks.java.allInclusive;
+package codewars.tasks.java.allinclusive;
 
 import java.util.ArrayList;
 import java.util.List;

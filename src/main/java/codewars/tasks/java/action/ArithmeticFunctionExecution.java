@@ -1,6 +1,6 @@
 package codewars.tasks.java.action;
 
-import codewars.tasks.java.arithmeticFunction.ArithmeticFunction;
+import codewars.tasks.java.arithmeticfunction.ArithmeticFunction;
 
 public class ArithmeticFunctionExecution {
 

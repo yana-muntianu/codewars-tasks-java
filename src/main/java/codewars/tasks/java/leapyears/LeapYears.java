@@ -1,4 +1,4 @@
-package codewars.tasks.java.leapYears;
+package codewars.tasks.java.leapyears;
 
 public class LeapYears {
     /**

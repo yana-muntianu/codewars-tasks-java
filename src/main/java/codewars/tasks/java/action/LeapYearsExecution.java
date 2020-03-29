@@ -1,6 +1,6 @@
 package codewars.tasks.java.action;
 
-import codewars.tasks.java.leapYears.LeapYears;
+import codewars.tasks.java.leapyears.LeapYears;
 
 public class LeapYearsExecution {
 

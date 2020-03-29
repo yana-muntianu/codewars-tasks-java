@@ -1,4 +1,4 @@
-package codewars.tasks.java.temperatureAnalysis;
+package codewars.tasks.java.temperatureanalysis;
 
 import java.util.Arrays;
 

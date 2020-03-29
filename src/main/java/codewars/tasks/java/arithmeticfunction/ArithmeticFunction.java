@@ -1,4 +1,4 @@
-package codewars.tasks.java.arithmeticFunction;
+package codewars.tasks.java.arithmeticfunction;
 
 public class ArithmeticFunction {
 
