@@ -40,11 +40,6 @@
         </classes>
     </test>
 
-    <test name="Count bored score for office teams">
-        <classes><class name="codewars.tasks.java.TheOfficeTest" />;
-        </classes>
-    </test>
-
     <test name="Make Cuckoo clock">
         <classes><class name="codewars.tasks.java.ClockTest" />;
         </classes>
@@ -52,6 +47,11 @@
 
     <test name="Check if all string rotations exist in the array given ">
         <classes><class name="codewars.tasks.java.RotationsTest" />;
+        </classes>
+    </test>
+
+    <test name="Expanded form of number ">
+        <classes><class name="codewars.tasks.java.NumberInExpandedFormTest" />;
         </classes>
     </test>
 
