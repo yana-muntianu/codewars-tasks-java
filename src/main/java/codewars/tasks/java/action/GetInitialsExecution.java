@@ -1,6 +1,7 @@
 package codewars.tasks.java.action;
 
-import codewars.tasks.java.getInitials.GetInitials;
+
+import codewars.tasks.java.getinitials.GetInitials;
 
 public class GetInitialsExecution {
 

@@ -55,4 +55,10 @@
         </classes>
     </test>
 
+
+    <test name="Expanded form of number ">
+        <classes><class name="codewars.tasks.java.NumberInExpandedFormTest" />;
+        </classes>
+    </test>
+
 </suite>

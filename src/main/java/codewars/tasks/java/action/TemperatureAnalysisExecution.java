@@ -1,6 +1,7 @@
 package codewars.tasks.java.action;
 
-import codewars.tasks.java.temperatureAnalysis.TemperatureAnalysis;
+import codewars.tasks.java.temperatureanalysis.TemperatureAnalysis;
+
 
 public class TemperatureAnalysisExecution {
 
