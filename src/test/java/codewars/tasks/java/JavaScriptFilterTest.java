@@ -1,6 +1,7 @@
 package codewars.tasks.java;
 
 import codewars.tasks.java.javascriptfilter.JavaScriptFilter;
+
 import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 
