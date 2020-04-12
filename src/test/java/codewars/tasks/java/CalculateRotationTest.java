@@ -1,17 +1,19 @@
 package codewars.tasks.java;
 
 import codewars.tasks.java.calculatestringrotations.CalculateRotation;
-import org.junit.Test;
+import org.testng.annotations.Test;
+import static org.assertj.core.api.Assertions.assertThat;
 
-import static org.junit.Assert.assertEquals;
 
 public class CalculateRotationTest {
 
-        @Test
-        public void test() {
-            assertEquals(-1, CalculateRotation.shiftedDiff("hoop","pooh"));
-            assertEquals(2, CalculateRotation.shiftedDiff("coffee","eecoff"));
-            assertEquals(4, CalculateRotation.shiftedDiff("eecoff","coffee"));
-        }
+    @Test(testName = "5", description = "Verify string rotations calculation")
+    public void testCalcStringRotations() {
 
+        System.out.println("@Test - testCalcStringRotations");
+
+        assertThat(CalculateRotation.shiftedDiff("hoop","pooh")).isEqualTo(-1);
+        assertThat(CalculateRotation.shiftedDiff("coffee","eecoff")).isEqualTo(2);
+        assertThat(CalculateRotation.shiftedDiff("eecoff","coffee")).isEqualTo(4);
+        }
 }

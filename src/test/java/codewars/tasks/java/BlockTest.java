@@ -1,15 +1,20 @@
 package codewars.tasks.java;
+
 import codewars.tasks.java.block.Block;
+
 import org.testng.annotations.Test;
-import static org.testng.Assert.assertEquals;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class BlockTest {
 
-    @Test (testName = "2", description = "Verify Leap Year method")
-        public void testBasicBlock() throws Exception {
-            Block b = new Block(new int[]{2,2,2});
-            assertEquals(8,b.getVolume());
-            assertEquals(24,b.getSurfaceArea());
-        }
+    @Test (testName = "4", description = "Verify block volume and surface calculation")
+    public void testBasicBlock(){
+
+        System.out.println("@Test - testBasicBlock");
+        Block b = new Block(new int[]{2,2,2});
+
+        assertThat(b.getVolume()).isEqualTo(8);
+        assertThat(b.getSurfaceArea()).isEqualTo(24);
     }
+}
 

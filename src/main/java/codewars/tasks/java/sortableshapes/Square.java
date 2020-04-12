@@ -1,4 +1,4 @@
-package codewars.tasks.java.sortableShapes;
+package codewars.tasks.java.sortableshapes;
 
 public class Square extends Shape {
 

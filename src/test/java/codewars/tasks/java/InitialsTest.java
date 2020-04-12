@@ -1,19 +1,24 @@
 package codewars.tasks.java;
 
 import codewars.tasks.java.getinitials.GetInitials;
-
 import org.testng.annotations.Test;
-import static org.testng.Assert.*;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
 
 public class InitialsTest {
-    @Test(testName = "11", description = "Verify that got initials are matched with full name")
+
+    @Test(testName = "9", description = "Verify that got initials are matched with full name")
     public void testInitials(){
+
         System.out.println("@Test - testInitials");
+
         GetInitials initials = new GetInitials();
-        assertEquals("J. B.",initials.toInitials("Jack Bacon"));
-        assertEquals("M. A.",initials.toInitials("Mary Andersen"));
-        assertEquals("Please input full name",initials.toInitials("Andy"));
-        assertEquals("Please input full name",initials.toInitials("Kenneth Low Jr."));
-        assertEquals("M. V.",initials.toInitials("Mike Vazovsky"));
+
+        assertThat(initials.toInitials("Jack Bacon")).isEqualTo("J. B.");
+        assertThat(initials.toInitials("Mary Andersen")).isEqualTo("M. A.");
+        assertThat(initials.toInitials("Andy")).isEqualTo("Please input full name");
+        assertThat(initials.toInitials("Kenneth Low Jr.")).isEqualTo("Please input full name");
+        assertThat(initials.toInitials("Mike Vazovsky")).isEqualTo("M. V.");
     }
 }

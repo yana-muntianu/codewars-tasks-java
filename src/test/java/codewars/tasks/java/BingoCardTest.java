@@ -1,39 +1,42 @@
 package codewars.tasks.java;
 
 import codewars.tasks.java.bingocard.BingoCard;
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class BingoCardTest
 {
-    @Test
-    public void cardHas24Numbers()
-    {
-        assertEquals("A card contains 24 numbers.", 24, BingoCard.getCard().length);
+    @Test(testName = "3.1", description = "Verify Bingo card contains 24 cards")
+    public void testCardHas24Numbers() {
+
+        System.out.println("@Test - testCardHas24Numbers");
+        assertThat(BingoCard.getCard().length).isEqualTo(24);
     }
 
-    @Test
-    public void eachNumberOnCardIsUnique()
-    {
+    @Test(testName = "3.2", description = "Verify Bingo card contains unique numbers")
+    public void testEachNumberOnCardIsUnique(){
+
+        System.out.println("@Test - testEachNumberOnCardIsUnique");
+
         for (int i=0; i<10; i++)
         {
             String[] card = BingoCard.getCard();
 
-            Set<String> set = new HashSet<String>(Arrays.asList(card));
+            Set<String> set = new HashSet<>(Arrays.asList(card));
 
-            assertTrue(String.format("Card numbers are not unique: %s", String.join(" ",card)), set.size() == card.length);
+            assertThat(set.size()).isEqualTo(card.length);
         }
     }
 
-    @Test
-    public void categoriesAreInCorrectOrder()
-    {
+    @Test(testName = "3.3", description = "Verify Bingo card categories are in correct order")
+    public void testCategoriesAreInCorrectOrder(){
+
+        System.out.println("@Test - testCategoriesAreInCorrectOrder");
         String[] card = BingoCard.getCard();
 
         checkCategory(card, "B", 1, 5);
@@ -47,13 +50,14 @@ public class BingoCardTest
     {
         for (int i = start-1; i < end; i++)
         {
-            assertTrue(String.format("Number should start with '%s', found: '%s')", column, card[i]), card[i].startsWith(column));
+            assertThat(card[i]).contains(column);
         }
     }
 
-    @Test
-    public void numbersWithinColumnAreAllInTheCorrectRange()
-    {
+    @Test(testName = "3.4", description = "Verify Bingo card numbers ranges")
+    public void testNumbersWithinColumnAreAllInTheCorrectRange(){
+
+        System.out.println("@Test - testNumbersWithinColumnAreAllInTheCorrectRange");
         String[] card = BingoCard.getCard();
 
         checkColumn(card, "B", 1, 5, 1, 15);
@@ -68,13 +72,16 @@ public class BingoCardTest
         for (int i=start-1; i<end; i++)
         {
             int n = Integer.valueOf(card[i].substring(1));
-            assertTrue(String.format("Number should be in range from %d to %d, found: '%s')", beginRange, endRange, card[i]), n >= beginRange && n <= endRange);
+//            assertTrue(String.format("Number should be in range from %d to %d, found: '%s')", beginRange, endRange, card[i]), n >= beginRange && n <= endRange);
+            assertThat(n).isGreaterThanOrEqualTo(beginRange);
+            assertThat(n).isLessThanOrEqualTo(endRange);
         }
     }
 
-    @Test
-    public void numbersWithinColumnAreInRandomOrder()
-    {
+    @Test(testName = "3.5", description = "Verify Bingo card numbers random order")
+    public void testNumbersWithinColumnAreInRandomOrder(){
+
+        System.out.println("@Test - testNumbersWithinColumnAreInRandomOrder");
         String[] card = BingoCard.getCard();
 
         int count = checkColumnOnRandomness(card, "B", 1, 5) +
@@ -83,7 +90,7 @@ public class BingoCardTest
                 checkColumnOnRandomness(card, "G", 15, 19) +
                 checkColumnOnRandomness(card, "O", 20, 24);
 
-        assertTrue(String.format("Unlikely event: found only %d columns that are in random order.", count), count > 1);
+        assertThat(count).isGreaterThan(1);
     }
 
     private int checkColumnOnRandomness(String[] card, String column, int start, int end)
