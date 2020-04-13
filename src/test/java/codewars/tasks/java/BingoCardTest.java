@@ -1,6 +1,8 @@
 package codewars.tasks.java;
 
 import codewars.tasks.java.bingocard.BingoCard;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
@@ -9,19 +11,21 @@ import java.util.Set;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class BingoCardTest
-{
+public class BingoCardTest {
+
+    private static final Logger Log = LogManager.getLogger(BingoCardTest.class.getName());
+
     @Test(testName = "3.1", description = "Verify Bingo card contains 24 cards")
     public void testCardHas24Numbers() {
 
-        System.out.println("@Test - testCardHas24Numbers");
+        Log.info("@Test - testCardHas24Numbers()");
         assertThat(BingoCard.getCard().length).isEqualTo(24);
     }
 
     @Test(testName = "3.2", description = "Verify Bingo card contains unique numbers")
     public void testEachNumberOnCardIsUnique(){
 
-        System.out.println("@Test - testEachNumberOnCardIsUnique");
+        Log.info("@Test - testEachNumberOnCardIsUnique()");
 
         for (int i=0; i<10; i++)
         {
@@ -36,7 +40,7 @@ public class BingoCardTest
     @Test(testName = "3.3", description = "Verify Bingo card categories are in correct order")
     public void testCategoriesAreInCorrectOrder(){
 
-        System.out.println("@Test - testCategoriesAreInCorrectOrder");
+        Log.info("@Test - testCategoriesAreInCorrectOrder()");
         String[] card = BingoCard.getCard();
 
         checkCategory(card, "B", 1, 5);
@@ -46,8 +50,8 @@ public class BingoCardTest
         checkCategory(card, "O", 20, 24);
     }
 
-    private void checkCategory(String[] card, String column, int start, int end)
-    {
+    private void checkCategory(String[] card, String column, int start, int end) {
+
         for (int i = start-1; i < end; i++)
         {
             assertThat(card[i]).contains(column);
@@ -57,7 +61,7 @@ public class BingoCardTest
     @Test(testName = "3.4", description = "Verify Bingo card numbers ranges")
     public void testNumbersWithinColumnAreAllInTheCorrectRange(){
 
-        System.out.println("@Test - testNumbersWithinColumnAreAllInTheCorrectRange");
+        Log.info("@Test - testNumbersWithinColumnAreAllInTheCorrectRange()");
         String[] card = BingoCard.getCard();
 
         checkColumn(card, "B", 1, 5, 1, 15);
@@ -67,12 +71,11 @@ public class BingoCardTest
         checkColumn(card, "O", 20, 24, 61, 75);
     }
 
-    private void checkColumn(String[] card, String column, int start, int end, int beginRange, int endRange)
-    {
+    private void checkColumn(String[] card, String column, int start, int end, int beginRange, int endRange){
+
         for (int i=start-1; i<end; i++)
         {
             int n = Integer.valueOf(card[i].substring(1));
-//            assertTrue(String.format("Number should be in range from %d to %d, found: '%s')", beginRange, endRange, card[i]), n >= beginRange && n <= endRange);
             assertThat(n).isGreaterThanOrEqualTo(beginRange);
             assertThat(n).isLessThanOrEqualTo(endRange);
         }
@@ -81,7 +84,7 @@ public class BingoCardTest
     @Test(testName = "3.5", description = "Verify Bingo card numbers random order")
     public void testNumbersWithinColumnAreInRandomOrder(){
 
-        System.out.println("@Test - testNumbersWithinColumnAreInRandomOrder");
+        Log.info("@Test - testNumbersWithinColumnAreInRandomOrder()");
         String[] card = BingoCard.getCard();
 
         int count = checkColumnOnRandomness(card, "B", 1, 5) +
@@ -93,8 +96,8 @@ public class BingoCardTest
         assertThat(count).isGreaterThan(1);
     }
 
-    private int checkColumnOnRandomness(String[] card, String column, int start, int end)
-    {
+    private int checkColumnOnRandomness(String[] card, String column, int start, int end){
+
         int n = 0;
         boolean up = false;
         boolean down = false;

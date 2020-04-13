@@ -1,5 +1,8 @@
 package codewars.tasks.java.decodemorsecode;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -15,6 +18,7 @@ public class MorseCodeDecoder {
     3 spaces are used to separate words. For example, the message HEY JUDE in Morse code is ···· · −·−−   ·−−− ··− −·· ·.
      */
     private static Map<String, String> morseMap = new HashMap<>();
+    private static final Logger Log = LogManager.getLogger(MorseCodeDecoder.class.getName());
 
     static {
         String[] letters = { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R",
@@ -32,16 +36,19 @@ public class MorseCodeDecoder {
 
     public static String decode(String morseCode){
 
-            return Arrays.stream(morseCode.trim().split("   "))
-                    .map(MorseCodeDecoder::translate)
-                    .collect(Collectors.joining(" "));
-        }
+        Log.info("Running decode() method");
+        return Arrays.stream(morseCode.trim().split("   "))
+                .map(MorseCodeDecoder::translate)
+                .collect(Collectors.joining(" "));
+    }
 
     public static String translate(String word) {
-            return Arrays.stream(word.split(" "))
-                    .map(morseMap::get)
-                    .collect(Collectors.joining())
-                    .toUpperCase();
-        }
+
+        Log.info("Running translate() method");
+        return Arrays.stream(word.split(" "))
+                .map(morseMap::get)
+                .collect(Collectors.joining())
+                .toUpperCase();
+    }
 
 }

@@ -1,12 +1,16 @@
 package codewars.tasks.java;
 
 import codewars.tasks.java.salesmantravel.Travel;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 
 public class TravelTest {
+
+    private static final Logger Log = LogManager.getLogger(TravelTest.class.getName());
 
     String ad = "123 Main Street St. Louisville OH 43071,432 Main Long Road St. Louisville OH 43071,786 High Street Pollocksville NY 56432,"
             + "54 Holy Grail Street Niagara Town ZP 32908,3200 Main Rd. Bern AE 56210,1 Gordon St. Atlanta RE 13000,"
@@ -27,7 +31,7 @@ public class TravelTest {
     @Test(testName = "18", description = "Sort addresses by zipcode")
     public void testAddressOrder() {
 
-        System.out.println("@Test - testAddressOrder");
+        Log.info("@Test - testAddressOrder()");
 
         assertThat(Travel.travel(ad, "AA 45522")).isEqualTo("AA 45522:Paris St. Abbeville,Paris St. Abbeville/67,670");
         assertThat(Travel.travel(ad, "EX 34342")).isEqualTo("EX 34342:Pussy Cat Rd. Chicago,Pussy Cat Rd. Chicago/10,100");

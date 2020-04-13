@@ -1,5 +1,8 @@
 package codewars.tasks.java.numberInexpandedform;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.Arrays;
 
 public class NumberInExpandedForm {
@@ -7,8 +10,11 @@ public class NumberInExpandedForm {
     /*
     * You will be given a number and you will need to return it as a string in Expanded Form.
     */
+    private static final Logger Log = LogManager.getLogger(NumberInExpandedForm.class.getName());
+
     public static String expandedForm(int num) {
 
+        Log.info("Running expandedForm() method");
         String[] str = Integer.toString(num).split("");
         String result;
 
@@ -22,7 +28,6 @@ public class NumberInExpandedForm {
 
         result = Arrays.toString(str);
         result = result.substring(1, result.length()-1).replace(", 0","").replace(",", " +");
-        System.out.println(result);
 
         return result;
     }

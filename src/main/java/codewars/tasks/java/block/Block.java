@@ -1,10 +1,14 @@
 package codewars.tasks.java.block;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class Block {
 
     private int width;
     private int length;
     private int height;
+    private static final Logger Log = LogManager.getLogger(Block.class.getName());
 
     public Block(int[] measurements) {
         if(measurements.length == 3) {
@@ -18,17 +22,18 @@ public class Block {
      * This method counts block volume with given params
      */
     public int getVolume() {
-            int volume = this.width * this.length * this.height;
 
-            System.out.println(String.format("Block volume with params: %d, %d, %d is  %d", this.width, this.length , this.height, volume));
-            return volume; }
+        Log.info("Running getVolume() method");
+        int volume = this.width * this.length * this.height;
+
+        return volume; }
     /**
      * This method counts block surface area with given params
      */
     public int getSurfaceArea(){
-        int surfaceArea = 2*(this.width*this.length)+2*(this.length*this.height)+2*(this.height*this.width);
 
-        System.out.println(String.format("Block surface area with params:  %d, %d, %d is  %d",this.width, this.length , this.height, surfaceArea));
+        Log.info("Running getSurfaceArea() method");
+        int surfaceArea = 2*(this.width*this.length)+2*(this.length*this.height)+2*(this.height*this.width);
 
         return surfaceArea;
     }

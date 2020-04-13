@@ -1,5 +1,8 @@
 package codewars.tasks.java.clock;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class FizzBuzzCuckooClock {
 
     /*
@@ -14,11 +17,14 @@ just say the numbers ala Fizz Buzz, but then you decided at least for version 1.
 subtle "tick" sound for a little more clock nature and a little less noise.
      */
 
+    private static final Logger Log = LogManager.getLogger(FizzBuzzCuckooClock.class.getName());
+
     public static String fizzBuzzCuckooClock(String time){
 
         String message;
         int hours;
         int minutes;
+        Log.info("Running fizzBuzzCuckooClock() method");
 
         String[] splitTime = time.split(":");
         hours = Integer.parseInt(splitTime[0]);
@@ -64,12 +70,14 @@ subtle "tick" sound for a little more clock nature and a little less noise.
                     updatedHours = 11;
                 }break;
                 default:
-                    System.out.println("Incorrect time format");
+                    Log.error("Incorrect time format");
+                    throw new IllegalArgumentException();
             }
             message = "Cuckoo ";
             String newMessage = message.repeat(updatedHours);
-            System.out.println(newMessage.trim());
+
             return newMessage.trim();
+
         }else if (minutes == 30) {
             message = "Cuckoo";
         }else if (minutes % 3 == 0 && minutes % 5 == 0){
@@ -83,7 +91,6 @@ subtle "tick" sound for a little more clock nature and a little less noise.
         }else
             message = "Incorrect time format";
 
-        System.out.println(time + " " + message);
         return message;
     }
 

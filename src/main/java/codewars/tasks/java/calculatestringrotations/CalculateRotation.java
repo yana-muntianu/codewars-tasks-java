@@ -1,7 +1,11 @@
 package codewars.tasks.java.calculatestringrotations;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class CalculateRotation {
 
+    private static final Logger Log = LogManager.getLogger(CalculateRotation.class.getName());
     /*
     Write a function that receives two strings and returns n, where n is equal to the number of characters we should
 shift the first string forward to match the second.
@@ -11,11 +15,14 @@ If the second string isn't a valid rotation of the first string, the method retu
      */
     public static int shiftedDiff(String first, String second){
 
+        Log.info("Running shiftedDiff() method");
+
         if(first.length() != second.length()){
             return -1;
         }
 
         if(first.equals(second)){
+            Log.info("Strings are equals");
             return 0;
         }
 

@@ -1,13 +1,18 @@
 package codewars.tasks.java.sortableshapes;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public  class Shape implements Comparable<Shape> {
 
     protected double area;
+    private static final Logger Log = LogManager.getLogger(Shape.class.getName());
 
     Shape(final double area) {
 
-            this.area = area;
-        }
+        Log.info("Count shape area");
+        this.area = area;
+    }
 
         @Override
     public String toString() {

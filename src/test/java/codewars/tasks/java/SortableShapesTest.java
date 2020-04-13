@@ -1,6 +1,8 @@
 package codewars.tasks.java;
 
 import codewars.tasks.java.sortableshapes.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
@@ -12,10 +14,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class SortableShapesTest {
 
+    private static final Logger Log = LogManager.getLogger(SortableShapesTest.class.getName());
+
     @Test(testName = "16", description = "Verify shapes sorting")
     public void testShapesAreSortableOnArea(){
 
-        System.out.println("@Test - testShapesAreSortableOnArea");
+        Log.info("@Test - testShapesAreSortableOnArea()");
 
         // Arrange
         double area, side, radius, base, height, width;

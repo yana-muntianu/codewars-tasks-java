@@ -1,16 +1,20 @@
 package codewars.tasks.java;
 
 import codewars.tasks.java.leapyears.LeapYears;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
-import static org.assertj.core.api.Assertions.*;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class LeapYearsTest {
+
+    private static final Logger Log = LogManager.getLogger(LeapYearsTest.class.getName());
 
     @Test (testName = "11", description = "Verify Leap Year method")
     public void testIsYearLeap(){
 
-        System.out.println("@Test - testIsYearLeap");
+        Log.info("@Test - testIsYearLeap()");
 
         LeapYears isYearLeap = new LeapYears();
 

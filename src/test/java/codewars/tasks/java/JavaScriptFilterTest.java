@@ -1,16 +1,20 @@
 package codewars.tasks.java;
 
 import codewars.tasks.java.javascriptfilter.JavaScriptFilter;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
-import static org.assertj.core.api.Assertions.*;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class JavaScriptFilterTest {
+
+    private static final Logger Log = LogManager.getLogger(JavaScriptFilterTest.class.getName());
 
     @Test(testName = "10", description = "Check emails with '_'")
     public void testVerifyEmails(){
 
-        System.out.println("@Test - testVerifyEmails");
+        Log.info("@Test - testVerifyEmails()");
 
         JavaScriptFilter filter = new JavaScriptFilter();
 

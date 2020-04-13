@@ -1,6 +1,8 @@
 package codewars.tasks.java;
 
 import codewars.tasks.java.getinitials.GetInitials;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -8,10 +10,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class InitialsTest {
 
+    private static final Logger Log = LogManager.getLogger(InitialsTest.class.getName());
+
     @Test(testName = "9", description = "Verify that got initials are matched with full name")
     public void testInitials(){
 
-        System.out.println("@Test - testInitials");
+        Log.info("@Test - testInitials()");
 
         GetInitials initials = new GetInitials();
 
