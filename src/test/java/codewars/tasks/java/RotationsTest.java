@@ -1,32 +1,33 @@
 package codewars.tasks.java;
 
 import codewars.tasks.java.allinclusive.Rotations;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
 import java.util.List;
-import static org.testng.Assert.assertEquals;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class RotationsTest {
 
-    private static void testing(Boolean actual, Boolean expected) {
-        assertEquals(expected, actual);
-    }
+    private static final Logger LOG = LogManager.getLogger(RotationsTest.class.getName());
 
-    @Test (testName = "13", description = "Verify Rotations method")
-    public void test1Rotations() {
+    @Test(testName = "15", description = "Verify Rotations method")
+    public void testRotations() {
 
-        System.out.println("Fixed Tests containAllRots");
-        testing(Rotations.containAllRots("", Arrays.asList()), true);
+        LOG.info("@Test - testRotations()");
+
+        assertThat(Rotations.containAllRots("", Arrays.asList())).isTrue();
 
         List<String> a = Arrays.asList("bsjq", "qbsj");
-        testing(Rotations.containAllRots("", a), true);
+        assertThat(Rotations.containAllRots("", a)).isTrue();
 
         a = Arrays.asList("bsjq", "qbsj", "sjqb", "twZNsslC", "jqbs");
-        testing(Rotations.containAllRots("bsjq", a), true);
+        assertThat(Rotations.containAllRots("bsjq", a)).isTrue();
 
         a = Arrays.asList("TzYxlgfnhf", "yqVAuoLjMLy", "BhRXjYA", "YABhRXj", "hRXjYAB", "jYABhRX", "XjYABhR", "ABhRXjY");
-        testing(Rotations.containAllRots("XjYABhR", a), false);
+        assertThat(Rotations.containAllRots("XjYABhR", a)).isFalse();
     }
 }

@@ -1,11 +1,17 @@
 package codewars.tasks.java.battle;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class Battle {
 
     /**
      * This method declares winners within two fighters with parameters:
      * name, health, damage and returns the winner name
      */
+
+    private static final Logger LOG = LogManager.getLogger(Battle.class.getName());
+
     public static String declareWinner(Fighter fighter1, Fighter fighter2, String firstAttacker) {
 
         int fighter1Health = fighter1.getHealth();
@@ -15,6 +21,7 @@ public class Battle {
         String fighter1Name = fighter1.getName();
         String fighter2Name = fighter2.getName();
 
+        LOG.info("Running declareWinner() method");
         if (firstAttacker.equals(fighter1Name)) {
 
             while (fighter1Health > 0 && fighter2Health > 0) {

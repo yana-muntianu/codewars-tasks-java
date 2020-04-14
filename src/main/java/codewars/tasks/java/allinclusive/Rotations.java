@@ -1,9 +1,14 @@
 package codewars.tasks.java.allinclusive;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Rotations {
+
+    private static final Logger LOG = LogManager.getLogger(Rotations.class.getName());
 
     public static boolean containAllRots(String strng, List<String> arr) {
 
@@ -15,6 +20,8 @@ public class Rotations {
         a boolean true if all rotations of strng are included in arr (C returns 1)
         false otherwise (C returns 0)
          */
+
+        LOG.info("Running containAllRots method");
 
         boolean isAllRots = false;
         int n = strng.length();
@@ -43,7 +50,8 @@ public class Rotations {
         }else {
             isAllRots = true;
         }
-        System.out.println(isAllRots);
+
         return isAllRots;
+
     }
 }

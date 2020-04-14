@@ -1,11 +1,17 @@
 package codewars.tasks.java;
 
 import codewars.tasks.java.salesmantravel.Travel;
-import org.junit.Test;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.testng.annotations.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.assertj.core.api.Assertions.assertThat;
+
 
 public class TravelTest {
+
+    private static final Logger LOG = LogManager.getLogger(TravelTest.class.getName());
+
     String ad = "123 Main Street St. Louisville OH 43071,432 Main Long Road St. Louisville OH 43071,786 High Street Pollocksville NY 56432,"
             + "54 Holy Grail Street Niagara Town ZP 32908,3200 Main Rd. Bern AE 56210,1 Gordon St. Atlanta RE 13000,"
             + "10 Pussy Cat Rd. Chicago EX 34342,10 Gordon St. Atlanta RE 13000,58 Gordon Road Atlanta RE 13000,"
@@ -22,18 +28,16 @@ public class TravelTest {
     String code = "OH 43071,NY 56432,ZP 32908,AE 56210,RE 13000,EX 34342,SW 43098,AA 45521,GG 30654,ZP 32908,AE 56215,RE 13200,EX 34345,"
             + "RE 13222,RE 13001,SW 43198,AA 45522,GG 30655,XX 32321,YY 45098";
 
-    private static void testing(String actual, String expected) {
-        assertEquals(expected, actual);
-    }
+    @Test(testName = "18", description = "Sort addresses by zipcode")
+    public void testAddressOrder() {
 
-    @Test
-    public void test1() {
-        System.out.println("Fixed Tests: travel");
-        testing(Travel.travel(ad, "AA 45522"), "AA 45522:Paris St. Abbeville,Paris St. Abbeville/67,670");
-        testing(Travel.travel(ad, "EX 34342"), "EX 34342:Pussy Cat Rd. Chicago,Pussy Cat Rd. Chicago/10,100");
-        testing(Travel.travel(ad, "EX 34345"), "EX 34345:Pussy Cat Rd. Chicago/100");
-        testing(Travel.travel(ad, "AA 45521"), "AA 45521:Paris bd. Abbeville,Paris St. Abbeville/674,67");
-        testing(Travel.travel(ad, "AE 56215"), "AE 56215:Main Al. Bern/320");
-        testing(Travel.travel(ad, "AE 34567"), "AE 34567:/");
+        LOG.info("@Test - testAddressOrder()");
+
+        assertThat(Travel.travel(ad, "AA 45522")).isEqualTo("AA 45522:Paris St. Abbeville,Paris St. Abbeville/67,670");
+        assertThat(Travel.travel(ad, "EX 34342")).isEqualTo("EX 34342:Pussy Cat Rd. Chicago,Pussy Cat Rd. Chicago/10,100");
+        assertThat(Travel.travel(ad, "EX 34345")).isEqualTo("EX 34345:Pussy Cat Rd. Chicago/100");
+        assertThat(Travel.travel(ad, "AA 45521")).isEqualTo("AA 45521:Paris bd. Abbeville,Paris St. Abbeville/674,67");
+        assertThat(Travel.travel(ad, "AE 56215")).isEqualTo("AE 56215:Main Al. Bern/320");
+        assertThat(Travel.travel(ad, "AE 34567")).isEqualTo("AE 34567:/");
     }
 }
