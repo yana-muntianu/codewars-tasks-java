@@ -1,6 +1,6 @@
 package codewars.tasks.java;
 
-import codewars.tasks.java.allinclusive.Rotations;
+import codewars.tasks.java.allInclusive.Rotations;
 
 import org.testng.annotations.Test;
 

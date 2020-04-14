@@ -1,6 +1,6 @@
 package codewars.tasks.java;
 
-import codewars.tasks.java.getinitials.GetInitials;
+import codewars.tasks.java.getInitials.GetInitials;
 
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
