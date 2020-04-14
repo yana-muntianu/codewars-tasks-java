@@ -1,6 +1,6 @@
 package codewars.tasks.java;
 
-import codewars.tasks.java.sortableShapes.*;
+import codewars.tasks.java.sortableshapes.*;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
