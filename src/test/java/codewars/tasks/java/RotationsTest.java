@@ -12,12 +12,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class RotationsTest {
 
-    private static final Logger Log = LogManager.getLogger(RotationsTest.class.getName());
+    private static final Logger LOG = LogManager.getLogger(RotationsTest.class.getName());
 
     @Test(testName = "15", description = "Verify Rotations method")
     public void testRotations() {
 
-        Log.info("@Test - testRotations()");
+        LOG.info("@Test - testRotations()");
 
         assertThat(Rotations.containAllRots("", Arrays.asList())).isTrue();
 

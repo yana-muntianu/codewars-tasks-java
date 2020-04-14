@@ -21,14 +21,14 @@ zipcode:street and town,street and town,.../house number,house number,...
 The street numbers must be in the same order as the streets where they belong.
 If a given zipcode doesn't exist in the list of clients' addresses return "zipcode:/"
      */
-    private static final Logger Log = LogManager.getLogger(Travel.class.getName());
+    private static final Logger LOG = LogManager.getLogger(Travel.class.getName());
 
     public static String travel(String r, String zipcode) {
 
         ArrayList<String> streets = new ArrayList<>();
         ArrayList<String>  apartments = new ArrayList<>();
         String filteredAddress;
-        Log.info("Running travel() method");
+        LOG.info("Running travel() method");
 
         of(r.split(",")).filter(s -> zipcode.equals(s.substring(s.length() - 8))).forEach(address -> {
                     streets.add(address.substring(address.indexOf(' ') + 1, address.length() - 9));

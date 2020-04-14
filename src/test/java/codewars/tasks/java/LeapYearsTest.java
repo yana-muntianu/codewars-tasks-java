@@ -9,12 +9,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class LeapYearsTest {
 
-    private static final Logger Log = LogManager.getLogger(LeapYearsTest.class.getName());
+    private static final Logger LOG = LogManager.getLogger(LeapYearsTest.class.getName());
 
     @Test (testName = "11", description = "Verify Leap Year method")
     public void testIsYearLeap(){
 
-        Log.info("@Test - testIsYearLeap()");
+        LOG.info("@Test - testIsYearLeap()");
 
         LeapYears isYearLeap = new LeapYears();
 

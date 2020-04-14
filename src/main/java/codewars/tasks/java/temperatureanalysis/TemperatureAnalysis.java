@@ -11,12 +11,12 @@ public class TemperatureAnalysis {
     You were given a string of integer temperature values.
     Create a function lowest_temp(t) and return the lowest value or None/null/Nothing if the string is empty.
      */
-    private static final Logger Log = LogManager.getLogger(TemperatureAnalysis.class.getName());
+    private static final Logger LOG = LogManager.getLogger(TemperatureAnalysis.class.getName());
 
     public int lowestTemperature(String temperature) {
 
         Integer lowestValue = 0;
-        Log.info("Running lowestTemperature() method");
+        LOG.info("Running lowestTemperature() method");
 
         if (!temperature.isEmpty()) {
 
@@ -31,7 +31,7 @@ public class TemperatureAnalysis {
             System.out.println(lowestValue);
 
         } else {
-            Log.error("There is no value");
+            LOG.error("There is no value");
         }
 
     return lowestValue;

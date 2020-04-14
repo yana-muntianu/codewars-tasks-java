@@ -9,12 +9,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class Vector3DTest {
 
-    private static final Logger Log = LogManager.getLogger(Vector3DTest.class.getName());
+    private static final Logger LOG = LogManager.getLogger(Vector3DTest.class.getName());
 
     @Test (testName = "19", description = "Verify Vector 3D method")
     public void testCountVectorLength(){
 
-        Log.info("@Test - testCountVectorLength()");
+        LOG.info("@Test - testCountVectorLength()");
 
         Vector3D vector3D = new Vector3D();
 

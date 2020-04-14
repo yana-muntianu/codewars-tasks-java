@@ -9,12 +9,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class NumberInExpandedFormTest {
 
-    private static final Logger Log = LogManager.getLogger(NumberInExpandedFormTest.class.getName());
+    private static final Logger LOG = LogManager.getLogger(NumberInExpandedFormTest.class.getName());
 
     @Test (testName = "13", description = "Verify expanded form method")
     public void testIsNumInExpandedForm() {
 
-        Log.info("@Test - testIsNumInExpandedForm()");
+        LOG.info("@Test - testIsNumInExpandedForm()");
 
         assertThat(NumberInExpandedForm.expandedForm(12)).isEqualTo("10 + 2");
         assertThat(NumberInExpandedForm.expandedForm(42)).isEqualTo("40 + 2");

@@ -9,12 +9,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class DictionaryTest {
 
-    private static final Logger Log = LogManager.getLogger(DictionaryTest.class.getName());
+    private static final Logger LOG = LogManager.getLogger(DictionaryTest.class.getName());
 
     @Test(testName = "8", description = "Verify Interactive Dictionary method")
     public void testInteractiveDictionary(){
 
-        Log.info("@Test - testInteractiveDictionary()");
+        LOG.info("@Test - testInteractiveDictionary()");
 
         Dictionary d = new Dictionary();
 

@@ -8,7 +8,7 @@ import java.util.Random;
 
 public class BingoCard {
 
-    private static final Logger Log = LogManager.getLogger(BingoCard.class.getName());
+    private static final Logger LOG = LogManager.getLogger(BingoCard.class.getName());
     static Random randomB = new Random();
     static Random randomI = new Random();
     static Random randomN = new Random();
@@ -27,7 +27,7 @@ The numbers must be in the order of their column: B, I, N, G, O. Within the colu
  */
     public static String[] getCard() {
 
-        Log.info("Running getCard() method");
+        LOG.info("Running getCard() method");
         ArrayList<String> bingoList = new ArrayList<>();
         String[] bingoCard;
 

@@ -6,11 +6,11 @@ import org.apache.logging.log4j.Logger;
 public  class Shape implements Comparable<Shape> {
 
     protected double area;
-    private static final Logger Log = LogManager.getLogger(Shape.class.getName());
+    private static final Logger LOG = LogManager.getLogger(Shape.class.getName());
 
     Shape(final double area) {
 
-        Log.info("Count shape area");
+        LOG.info("Count shape area");
         this.area = area;
     }
 

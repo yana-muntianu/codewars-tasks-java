@@ -9,12 +9,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class JavaScriptFilterTest {
 
-    private static final Logger Log = LogManager.getLogger(JavaScriptFilterTest.class.getName());
+    private static final Logger LOG = LogManager.getLogger(JavaScriptFilterTest.class.getName());
 
     @Test(testName = "10", description = "Check emails with '_'")
     public void testVerifyEmails(){
 
-        Log.info("@Test - testVerifyEmails()");
+        LOG.info("@Test - testVerifyEmails()");
 
         JavaScriptFilter filter = new JavaScriptFilter();
 

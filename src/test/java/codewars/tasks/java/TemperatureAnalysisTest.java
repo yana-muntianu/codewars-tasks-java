@@ -9,12 +9,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class TemperatureAnalysisTest {
 
-    private static final Logger Log = LogManager.getLogger(TemperatureAnalysisTest.class.getName());
+    private static final Logger LOG = LogManager.getLogger(TemperatureAnalysisTest.class.getName());
 
     @Test(testName = "17", description = "Get the lowest temperature from the list")
     public void testGetLowestTemperature(){
 
-        Log.info("@Test - testGetLowestTemperature()");
+        LOG.info("@Test - testGetLowestTemperature()");
 
         TemperatureAnalysis analysis = new TemperatureAnalysis();
 

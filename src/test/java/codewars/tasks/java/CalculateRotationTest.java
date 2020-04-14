@@ -10,12 +10,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class CalculateRotationTest {
 
-    private static final Logger Log = LogManager.getLogger(CalculateRotationTest.class.getName());
+    private static final Logger LOG = LogManager.getLogger(CalculateRotationTest.class.getName());
 
     @Test(testName = "5", description = "Verify string rotations calculation")
     public void testCalcStringRotations() {
 
-        Log.info("@Test - testCalcStringRotations()");
+        LOG.info("@Test - testCalcStringRotations()");
 
         assertThat(CalculateRotation.shiftedDiff("hoop","pooh")).isEqualTo(-1);
         assertThat(CalculateRotation.shiftedDiff("coffee","eecoff")).isEqualTo(2);

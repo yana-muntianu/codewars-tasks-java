@@ -8,7 +8,7 @@ public class Block {
     private int width;
     private int length;
     private int height;
-    private static final Logger Log = LogManager.getLogger(Block.class.getName());
+    private static final Logger LOG = LogManager.getLogger(Block.class.getName());
 
     public Block(int[] measurements) {
         if(measurements.length == 3) {
@@ -23,7 +23,7 @@ public class Block {
      */
     public int getVolume() {
 
-        Log.info("Running getVolume() method");
+        LOG.info("Running getVolume() method");
         int volume = this.width * this.length * this.height;
 
         return volume; }
@@ -32,7 +32,7 @@ public class Block {
      */
     public int getSurfaceArea(){
 
-        Log.info("Running getSurfaceArea() method");
+        LOG.info("Running getSurfaceArea() method");
         int surfaceArea = 2*(this.width*this.length)+2*(this.length*this.height)+2*(this.height*this.width);
 
         return surfaceArea;

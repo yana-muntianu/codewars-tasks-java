@@ -12,11 +12,11 @@ public class ArithmeticFunction {
     The four operators are "add", "subtract", "divide", "multiply".
      */
 
-    private static final Logger Log = LogManager.getLogger(ArithmeticFunction.class.getName());
+    private static final Logger LOG = LogManager.getLogger(ArithmeticFunction.class.getName());
 
     public static int arithmetic(int a, int b, String operator) {
 
-        Log.info("Running arithmetic() method");
+        LOG.info("Running arithmetic() method");
 
         int result = 0;
 
@@ -34,7 +34,7 @@ public class ArithmeticFunction {
                 break;
 
             default:
-                Log.error(String.format("Invalid argument: %s", operator));
+                LOG.error(String.format("Invalid argument: %s", operator));
                 throw new IllegalArgumentException();
 
 

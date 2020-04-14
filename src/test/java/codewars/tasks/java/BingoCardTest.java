@@ -13,19 +13,19 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class BingoCardTest {
 
-    private static final Logger Log = LogManager.getLogger(BingoCardTest.class.getName());
+    private static final Logger LOG = LogManager.getLogger(BingoCardTest.class.getName());
 
     @Test(testName = "3.1", description = "Verify Bingo card contains 24 cards")
     public void testCardHas24Numbers() {
 
-        Log.info("@Test - testCardHas24Numbers()");
+        LOG.info("@Test - testCardHas24Numbers()");
         assertThat(BingoCard.getCard().length).isEqualTo(24);
     }
 
     @Test(testName = "3.2", description = "Verify Bingo card contains unique numbers")
     public void testEachNumberOnCardIsUnique(){
 
-        Log.info("@Test - testEachNumberOnCardIsUnique()");
+        LOG.info("@Test - testEachNumberOnCardIsUnique()");
 
         for (int i=0; i<10; i++)
         {
@@ -40,7 +40,7 @@ public class BingoCardTest {
     @Test(testName = "3.3", description = "Verify Bingo card categories are in correct order")
     public void testCategoriesAreInCorrectOrder(){
 
-        Log.info("@Test - testCategoriesAreInCorrectOrder()");
+        LOG.info("@Test - testCategoriesAreInCorrectOrder()");
         String[] card = BingoCard.getCard();
 
         checkCategory(card, "B", 1, 5);
@@ -61,7 +61,7 @@ public class BingoCardTest {
     @Test(testName = "3.4", description = "Verify Bingo card numbers ranges")
     public void testNumbersWithinColumnAreAllInTheCorrectRange(){
 
-        Log.info("@Test - testNumbersWithinColumnAreAllInTheCorrectRange()");
+        LOG.info("@Test - testNumbersWithinColumnAreAllInTheCorrectRange()");
         String[] card = BingoCard.getCard();
 
         checkColumn(card, "B", 1, 5, 1, 15);
@@ -84,7 +84,7 @@ public class BingoCardTest {
     @Test(testName = "3.5", description = "Verify Bingo card numbers random order")
     public void testNumbersWithinColumnAreInRandomOrder(){
 
-        Log.info("@Test - testNumbersWithinColumnAreInRandomOrder()");
+        LOG.info("@Test - testNumbersWithinColumnAreInRandomOrder()");
         String[] card = BingoCard.getCard();
 
         int count = checkColumnOnRandomness(card, "B", 1, 5) +

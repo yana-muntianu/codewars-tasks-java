@@ -10,7 +10,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class CalculatorTest {
 
-    private static final Logger Log = LogManager.getLogger(CalculatorTest.class.getName());
+    private static final Logger LOG = LogManager.getLogger(CalculatorTest.class.getName());
     private Calculator sut = new Calculator();
 
     @Test(testName = "6.1", description = "Verify Triangle area")
@@ -19,7 +19,7 @@ public class CalculatorTest {
         double triangleBase = 6;
         double triangleHeight = 4;
 
-        Log.info("@Test - testAreaOfATriangleIsBaseMultipliedByHeight()");
+        LOG.info("@Test - testAreaOfATriangleIsBaseMultipliedByHeight()");
 
         assertThat(sut.getTotalArea(new Triangle(triangleBase, triangleHeight))).isEqualTo(12.0000);
     }
@@ -29,7 +29,7 @@ public class CalculatorTest {
 
         double side = 6;
 
-        Log.info("@Test - testAreaOfASquareIsSquareOfSide()");
+        LOG.info("@Test - testAreaOfASquareIsSquareOfSide()");
 
         assertThat(sut.getTotalArea(new Square(side))).isEqualTo(36.0000);
     }
@@ -40,7 +40,7 @@ public class CalculatorTest {
         double height = 4;
         double width = 8;
 
-        Log.info("@Test - testAreaOfARectangleIsWidthMultipliedByHeight()");
+        LOG.info("@Test - testAreaOfARectangleIsWidthMultipliedByHeight()");
 
         assertThat(sut.getTotalArea(new Rectangle(width, height))).isEqualTo(32.0000);
     }
@@ -50,7 +50,7 @@ public class CalculatorTest {
 
         double radius = 3;
 
-        Log.info("@Test - testAreaOfACircleIsSquareOfRadiusMulitpliedByPi()");
+        LOG.info("@Test - testAreaOfACircleIsSquareOfRadiusMulitpliedByPi()");
 
         assertThat(sut.getTotalArea(new Circle(radius))).isEqualTo(28.2700);
     }
@@ -58,7 +58,7 @@ public class CalculatorTest {
     @Test(testName = "6.5", description = "Verify sum of areas all figures")
     public void testTotalAreaIsSumOfAreasOfDifferentShapes(){
 
-        Log.info("@Test - testTotalAreaIsSumOfAreasOfDifferentShapes()");
+        LOG.info("@Test - testTotalAreaIsSumOfAreasOfDifferentShapes()");
 
         assertThat(sut.getTotalArea(new Rectangle(4, 2), new Rectangle(3, 4),
                 new Circle(1), new Square(1), new Triangle(10, 5))).isEqualTo(49.1400);
@@ -67,7 +67,7 @@ public class CalculatorTest {
     @Test(testName = "6.6", description = "Verify area is rounded to 2 decimals")
     public void testTotalAreaIsRoundedTo2Decimals(){
 
-        Log.info("@Test - testTotalAreaIsRoundedTo2Decimals()");
+        LOG.info("@Test - testTotalAreaIsRoundedTo2Decimals()");
 
         assertThat(sut.getTotalArea(new Rectangle(1.112, 2), new Rectangle(1.111, 2))).isEqualTo(4.45);
     }
@@ -75,7 +75,7 @@ public class CalculatorTest {
     @Test(testName = "6.7", description = "Verify no shapes given")
     public void testTotalAreaIs0WhenThereAreNoShapes(){
 
-        Log.info("@Test - testTotalAreaIs0WhenThereAreNoShapes()");
+        LOG.info("@Test - testTotalAreaIs0WhenThereAreNoShapes()");
 
         assertThat(sut.getTotalArea()).isEqualTo(0);
     }

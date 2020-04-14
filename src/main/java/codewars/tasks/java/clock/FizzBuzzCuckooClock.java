@@ -17,14 +17,14 @@ just say the numbers ala Fizz Buzz, but then you decided at least for version 1.
 subtle "tick" sound for a little more clock nature and a little less noise.
      */
 
-    private static final Logger Log = LogManager.getLogger(FizzBuzzCuckooClock.class.getName());
+    private static final Logger LOG = LogManager.getLogger(FizzBuzzCuckooClock.class.getName());
 
     public static String fizzBuzzCuckooClock(String time){
 
         String message;
         int hours;
         int minutes;
-        Log.info("Running fizzBuzzCuckooClock() method");
+        LOG.info("Running fizzBuzzCuckooClock() method");
 
         String[] splitTime = time.split(":");
         hours = Integer.parseInt(splitTime[0]);
@@ -70,7 +70,7 @@ subtle "tick" sound for a little more clock nature and a little less noise.
                     updatedHours = 11;
                 }break;
                 default:
-                    Log.error("Incorrect time format");
+                    LOG.error("Incorrect time format");
                     throw new IllegalArgumentException();
             }
             message = "Cuckoo ";

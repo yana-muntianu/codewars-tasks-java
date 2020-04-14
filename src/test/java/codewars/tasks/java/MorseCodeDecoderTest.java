@@ -9,12 +9,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class MorseCodeDecoderTest {
 
-    private static final Logger Log = LogManager.getLogger(MorseCodeDecoderTest.class.getName());
+    private static final Logger LOG = LogManager.getLogger(MorseCodeDecoderTest.class.getName());
 
     @Test(testName = "12", description = "Verify Morse code decoder")
     public void testExampleFromDescription() {
 
-        Log.info("@Test - testExampleFromDescription()");
+        LOG.info("@Test - testExampleFromDescription()");
 
         assertThat(MorseCodeDecoder.decode(".... . -.--   .--- ..- -.. .")).isEqualTo("HEY JUDE");
     }

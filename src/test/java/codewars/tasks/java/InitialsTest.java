@@ -10,12 +10,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class InitialsTest {
 
-    private static final Logger Log = LogManager.getLogger(InitialsTest.class.getName());
+    private static final Logger LOG = LogManager.getLogger(InitialsTest.class.getName());
 
     @Test(testName = "9", description = "Verify that got initials are matched with full name")
     public void testInitials(){
 
-        Log.info("@Test - testInitials()");
+        LOG.info("@Test - testInitials()");
 
         GetInitials initials = new GetInitials();
 

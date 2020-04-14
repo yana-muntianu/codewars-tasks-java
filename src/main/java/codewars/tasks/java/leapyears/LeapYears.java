@@ -7,11 +7,11 @@ public class LeapYears {
     /**
      * This method verifies is given year leap or not
      */
-    private static final Logger Log = LogManager.getLogger(LeapYears.class.getName());
+    private static final Logger LOG = LogManager.getLogger(LeapYears.class.getName());
 
     public boolean isYearLeap(int year){
 
-        Log.info("Running isYearLeap() method");
+        LOG.info("Running isYearLeap() method");
         boolean isYearLeap = false;
 
         if(year % 100 == 0){

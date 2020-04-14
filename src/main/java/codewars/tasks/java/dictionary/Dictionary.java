@@ -9,7 +9,7 @@ import java.util.Map;
 public class Dictionary {
 
     private final Map<String,String> dictionary = new HashMap<>();
-    private static final Logger Log = LogManager.getLogger(Dictionary.class.getName());
+    private static final Logger LOG = LogManager.getLogger(Dictionary.class.getName());
 
     /*
      * Description:
@@ -20,18 +20,18 @@ public class Dictionary {
 
     public void newEntry(String key, String value){
 
-        Log.info("Running newEntry() method - add new entry to dictionary");
+        LOG.info("Running newEntry() method - add new entry to dictionary");
         dictionary.put(key,value);
     }
 
     public String look(String key){
 
-        Log.info("Running look() method");
+        LOG.info("Running look() method");
 
         if (dictionary.containsKey(key)){
            return dictionary.get(key);
         } else
-            Log.error(String.format("Cant find entry for %s", key));
+            LOG.error(String.format("Cant find entry for %s", key));
             return "Cant find entry for " + key;
 
     }

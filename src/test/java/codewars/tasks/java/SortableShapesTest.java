@@ -14,12 +14,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class SortableShapesTest {
 
-    private static final Logger Log = LogManager.getLogger(SortableShapesTest.class.getName());
+    private static final Logger LOG = LogManager.getLogger(SortableShapesTest.class.getName());
 
     @Test(testName = "16", description = "Verify shapes sorting")
     public void testShapesAreSortableOnArea(){
 
-        Log.info("@Test - testShapesAreSortableOnArea()");
+        LOG.info("@Test - testShapesAreSortableOnArea()");
 
         // Arrange
         double area, side, radius, base, height, width;

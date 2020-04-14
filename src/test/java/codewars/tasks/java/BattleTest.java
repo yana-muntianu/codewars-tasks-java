@@ -10,12 +10,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class BattleTest {
 
-    private static final Logger Log = LogManager.getLogger(BattleTest.class.getName());
+    private static final Logger LOG = LogManager.getLogger(BattleTest.class.getName());
 
     @Test(testName = "2", description = "Verify Battle method (find winner)")
     public void testBattle(){
 
-        Log.info("@Test - testBattle()");
+        LOG.info("@Test - testBattle()");
 
         assertThat(Battle.declareWinner(new Fighter("Lew", 10, 2),
                 new Fighter("Harry", 5, 4), "Lew")).isEqualTo("Lew");

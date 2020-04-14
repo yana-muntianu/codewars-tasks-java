@@ -13,11 +13,11 @@ public class Persist {
             * # persistence(999) == 4 // because 9*9*9 = 729, 7*2*9 = 126, 1*2*6 = 12, and finally 1*2 = 2
             * # persistence(4) == 0   // because 4 is already a one-digit number
             */
-   private static final Logger Log = LogManager.getLogger(Persist.class.getName());
+   private static final Logger LOG = LogManager.getLogger(Persist.class.getName());
 
     public static int persistence(long num) {
         int result = 0;
-        Log.info("Running persistence() method");
+        LOG.info("Running persistence() method");
 
         while (num > 9) {
             long multiply = 1;

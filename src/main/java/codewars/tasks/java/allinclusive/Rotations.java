@@ -8,7 +8,7 @@ import java.util.List;
 
 public class Rotations {
 
-    private static final Logger Log = LogManager.getLogger(Rotations.class.getName());
+    private static final Logger LOG = LogManager.getLogger(Rotations.class.getName());
 
     public static boolean containAllRots(String strng, List<String> arr) {
 
@@ -21,7 +21,7 @@ public class Rotations {
         false otherwise (C returns 0)
          */
 
-        Log.info("Running containAllRots method");
+        LOG.info("Running containAllRots method");
 
         boolean isAllRots = false;
         int n = strng.length();

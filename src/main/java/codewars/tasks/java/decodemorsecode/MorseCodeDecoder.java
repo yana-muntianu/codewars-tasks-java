@@ -18,7 +18,7 @@ public class MorseCodeDecoder {
     3 spaces are used to separate words. For example, the message HEY JUDE in Morse code is ···· · −·−−   ·−−− ··− −·· ·.
      */
     private static Map<String, String> morseMap = new HashMap<>();
-    private static final Logger Log = LogManager.getLogger(MorseCodeDecoder.class.getName());
+    private static final Logger LOG = LogManager.getLogger(MorseCodeDecoder.class.getName());
 
     static {
         String[] letters = { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R",
@@ -36,7 +36,7 @@ public class MorseCodeDecoder {
 
     public static String decode(String morseCode){
 
-        Log.info("Running decode() method");
+        LOG.info("Running decode() method");
         return Arrays.stream(morseCode.trim().split("   "))
                 .map(MorseCodeDecoder::translate)
                 .collect(Collectors.joining(" "));
@@ -44,7 +44,7 @@ public class MorseCodeDecoder {
 
     public static String translate(String word) {
 
-        Log.info("Running translate() method");
+        LOG.info("Running translate() method");
         return Arrays.stream(word.split(" "))
                 .map(morseMap::get)
                 .collect(Collectors.joining())

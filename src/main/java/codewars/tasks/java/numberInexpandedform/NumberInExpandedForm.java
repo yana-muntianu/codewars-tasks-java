@@ -10,11 +10,11 @@ public class NumberInExpandedForm {
     /*
     * You will be given a number and you will need to return it as a string in Expanded Form.
     */
-    private static final Logger Log = LogManager.getLogger(NumberInExpandedForm.class.getName());
+    private static final Logger LOG = LogManager.getLogger(NumberInExpandedForm.class.getName());
 
     public static String expandedForm(int num) {
 
-        Log.info("Running expandedForm() method");
+        LOG.info("Running expandedForm() method");
         String[] str = Integer.toString(num).split("");
         String result;
 

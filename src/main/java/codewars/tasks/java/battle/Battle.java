@@ -10,7 +10,7 @@ public class Battle {
      * name, health, damage and returns the winner name
      */
 
-    private static final Logger Log = LogManager.getLogger(Battle.class.getName());
+    private static final Logger LOG = LogManager.getLogger(Battle.class.getName());
 
     public static String declareWinner(Fighter fighter1, Fighter fighter2, String firstAttacker) {
 
@@ -21,7 +21,7 @@ public class Battle {
         String fighter1Name = fighter1.getName();
         String fighter2Name = fighter2.getName();
 
-        Log.info("Running declareWinner() method");
+        LOG.info("Running declareWinner() method");
         if (firstAttacker.equals(fighter1Name)) {
 
             while (fighter1Health > 0 && fighter2Health > 0) {
