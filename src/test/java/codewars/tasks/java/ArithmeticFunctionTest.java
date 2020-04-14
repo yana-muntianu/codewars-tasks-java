@@ -1,7 +1,7 @@
 package codewars.tasks.java;
 
 
-import codewars.tasks.java.arithmeticFunction.ArithmeticFunction;
+import codewars.tasks.java.arithmeticfunction.ArithmeticFunction;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 

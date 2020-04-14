@@ -1,4 +1,4 @@
-package codewars.tasks.java.numberInexpandedform;
+package codewars.tasks.java.numberinexpandedform;
 
 import java.util.Arrays;
 

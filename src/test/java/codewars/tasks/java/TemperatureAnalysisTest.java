@@ -1,6 +1,6 @@
 package codewars.tasks.java;
 
-import codewars.tasks.java.temperatureAnalysis.TemperatureAnalysis;
+import codewars.tasks.java.temperatureanalysis.TemperatureAnalysis;
 
 import org.testng.annotations.Test;
 

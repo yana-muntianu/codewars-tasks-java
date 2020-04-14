@@ -1,4 +1,4 @@
-package codewars.tasks.java.javascriptFilter;
+package codewars.tasks.java.javascriptfilter;
 
 import java.util.Arrays;
 

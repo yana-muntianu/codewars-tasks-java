@@ -1,6 +1,6 @@
 package codewars.tasks.java;
 
-import codewars.tasks.java.numberInexpandedform.NumberInExpandedForm;
+import codewars.tasks.java.numberinexpandedform.NumberInExpandedForm;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.*;
