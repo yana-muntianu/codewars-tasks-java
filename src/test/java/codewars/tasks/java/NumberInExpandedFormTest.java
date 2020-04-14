@@ -1,6 +1,6 @@
 package codewars.tasks.java;
 
-import codewars.tasks.java.numberInexpandedform.NumberInExpandedForm;
+import codewars.tasks.java.numberinexpandedform.NumberInExpandedForm;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;

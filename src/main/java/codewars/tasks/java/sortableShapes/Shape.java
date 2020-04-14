@@ -1,4 +1,4 @@
-package codewars.tasks.java.sortableshapes;
+package codewars.tasks.java.sortableShapes;
 
 public  class Shape implements Comparable<Shape> {
 
