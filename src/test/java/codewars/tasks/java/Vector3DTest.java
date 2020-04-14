@@ -1,31 +1,23 @@
 package codewars.tasks.java;
+
 import codewars.tasks.java.vector.Vector3D;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.assertEquals;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class Vector3DTest {
 
-    @BeforeClass
-    public void testSetUp(){
-        System.out.println("Running TestNG");
-    }
-    @AfterClass
-    public void testTearDown(){
-        System.out.println("Stopping TestNG");
-    }
+    private static final Logger LOG = LogManager.getLogger(Vector3DTest.class.getName());
 
-    @Test (testName = "1", description = "Verify Vector 3D method")
-    public void countVectorLength(){
-        System.out.println("@Test - countVectorLength");
+    @Test (testName = "19", description = "Verify Vector 3D method")
+    public void testCountVectorLength(){
+
+        LOG.info("@Test - testCountVectorLength()");
+
         Vector3D vector3D = new Vector3D();
 
-        vector3D.getLength(0,2,0);
-        assertEquals(2.0, 2.0);
-
-
+        assertThat(vector3D.getLength(0,2,0)).isEqualTo(2.0);
     }
-
 }

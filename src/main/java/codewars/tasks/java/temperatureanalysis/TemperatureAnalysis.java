@@ -1,5 +1,8 @@
 package codewars.tasks.java.temperatureanalysis;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.Arrays;
 
 public class TemperatureAnalysis {
@@ -8,9 +11,12 @@ public class TemperatureAnalysis {
     You were given a string of integer temperature values.
     Create a function lowest_temp(t) and return the lowest value or None/null/Nothing if the string is empty.
      */
+    private static final Logger LOG = LogManager.getLogger(TemperatureAnalysis.class.getName());
+
     public int lowestTemperature(String temperature) {
 
         Integer lowestValue = 0;
+        LOG.info("Running lowestTemperature() method");
 
         if (!temperature.isEmpty()) {
 
@@ -25,9 +31,8 @@ public class TemperatureAnalysis {
             System.out.println(lowestValue);
 
         } else {
-            System.out.println("There is no value");
+            LOG.error("There is no value");
         }
-
 
     return lowestValue;
     }

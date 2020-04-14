@@ -1,6 +1,9 @@
 package codewars.tasks.java;
 
 import codewars.tasks.java.sortableshapes.*;
+import codewars.tasks.java.sortableshapes.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
@@ -8,12 +11,17 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.Random;
 
-import static org.testng.Assert.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class SortableShapesTest {
-    @Test
-    public void ShapesAreSortableOnArea()
-    {
+
+    private static final Logger LOG = LogManager.getLogger(SortableShapesTest.class.getName());
+
+    @Test(testName = "16", description = "Verify shapes sorting")
+    public void testShapesAreSortableOnArea(){
+
+        LOG.info("@Test - testShapesAreSortableOnArea()");
+
         // Arrange
         double area, side, radius, base, height, width;
         ArrayList<Shape> expected = new ArrayList<Shape>();
@@ -50,7 +58,7 @@ public class SortableShapesTest {
         // Assert
         Iterator a = actual.iterator();
         for (Shape e : expected) {
-            assertEquals(e, a.next());
+            assertThat(a.next()).isEqualTo(e);
         }
     }
 

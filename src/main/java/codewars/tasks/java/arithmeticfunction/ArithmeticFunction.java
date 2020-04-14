@@ -1,5 +1,8 @@
 package codewars.tasks.java.arithmeticfunction;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class ArithmeticFunction {
 
     /*
@@ -8,7 +11,13 @@ public class ArithmeticFunction {
     a and b will both be positive integers, and a will always be the first number in the operation, and b always the second.
     The four operators are "add", "subtract", "divide", "multiply".
      */
+
+    private static final Logger LOG = LogManager.getLogger(ArithmeticFunction.class.getName());
+
     public static int arithmetic(int a, int b, String operator) {
+
+        LOG.info("Running arithmetic() method");
+
         int result = 0;
 
         switch (operator){
@@ -25,7 +34,9 @@ public class ArithmeticFunction {
                 break;
 
             default:
-                throw new IllegalArgumentException("Invalid argument: " + operator);
+                LOG.error(String.format("Invalid argument: %s", operator));
+                throw new IllegalArgumentException();
+
 
         }
         return result;

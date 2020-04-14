@@ -1,11 +1,14 @@
 package codewars.tasks.java.bingocard;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Random;
 
 public class BingoCard {
 
+    private static final Logger LOG = LogManager.getLogger(BingoCard.class.getName());
     static Random randomB = new Random();
     static Random randomI = new Random();
     static Random randomN = new Random();
@@ -24,6 +27,7 @@ The numbers must be in the order of their column: B, I, N, G, O. Within the colu
  */
     public static String[] getCard() {
 
+        LOG.info("Running getCard() method");
         ArrayList<String> bingoList = new ArrayList<>();
         String[] bingoCard;
 
@@ -61,12 +65,12 @@ The numbers must be in the order of their column: B, I, N, G, O. Within the colu
 
         bingoCard = bingoList.toArray(new String[bingoList.size()]);
 
-        System.out.println(Arrays.toString(bingoCard));
         return bingoCard;
 
     }
 
     public static boolean numCheck(ArrayList<String> bingoList, String bingoNum) {
+
         for (int j = 0; j < bingoList.size(); j++) {
             if (bingoList.get(j).equals(bingoNum)) {
                 return false;

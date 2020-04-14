@@ -1,67 +1,82 @@
 package codewars.tasks.java;
 
-import codewars.tasks.java.calculator.Calculator;
-import codewars.tasks.java.calculator.Square;
-import codewars.tasks.java.calculator.Triangle;
-import codewars.tasks.java.calculator.Circle;
-import codewars.tasks.java.calculator.Rectangle;
+import codewars.tasks.java.calculator.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
-public class CalculatorTest
-{
+
+public class CalculatorTest {
+
+    private static final Logger LOG = LogManager.getLogger(CalculatorTest.class.getName());
     private Calculator sut = new Calculator();
 
-    @Test
-    public void areaOfATriangleIsBaseMultipliedByHeight()
-    {
+    @Test(testName = "6.1", description = "Verify Triangle area")
+    public void testAreaOfATriangleIsBaseMultipliedByHeight(){
+
         double triangleBase = 6;
         double triangleHeight = 4;
 
-        assertEquals(12, sut.getTotalArea(new Triangle(triangleBase, triangleHeight)), .0001);
+        LOG.info("@Test - testAreaOfATriangleIsBaseMultipliedByHeight()");
+
+        assertThat(sut.getTotalArea(new Triangle(triangleBase, triangleHeight))).isEqualTo(12.0000);
     }
 
-    @Test
-    public void areaOfASquareIsSquareOfSide()
-    {
+    @Test(testName = "6.2", description = "Verify Square area")
+    public void testAreaOfASquareIsSquareOfSide(){
+
         double side = 6;
 
-        assertEquals(36, sut.getTotalArea(new Square(side)), .0001);
+        LOG.info("@Test - testAreaOfASquareIsSquareOfSide()");
+
+        assertThat(sut.getTotalArea(new Square(side))).isEqualTo(36.0000);
     }
 
-    @Test
-    public void areaOfARectangleIsWidthMultipliedByHeight()
-    {
+    @Test(testName = "6.3", description = "Verify Rectangle area")
+    public void testAreaOfARectangleIsWidthMultipliedByHeight(){
+
         double height = 4;
         double width = 8;
 
-        assertEquals(32, sut.getTotalArea(new Rectangle(height, width)), .0001);
+        LOG.info("@Test - testAreaOfARectangleIsWidthMultipliedByHeight()");
+
+        assertThat(sut.getTotalArea(new Rectangle(width, height))).isEqualTo(32.0000);
     }
 
-    @Test
-    public void areaOfACircleIsSquareOfRadiusMulitpliedByPi()
-    {
+    @Test(testName = "6.4", description = "Verify Circle area")
+    public void testAreaOfACircleIsSquareOfRadiusMulitpliedByPi(){
+
         double radius = 3;
 
-        assertEquals(28.27, sut.getTotalArea(new Circle(radius)), .0001);
+        LOG.info("@Test - testAreaOfACircleIsSquareOfRadiusMulitpliedByPi()");
+
+        assertThat(sut.getTotalArea(new Circle(radius))).isEqualTo(28.2700);
     }
 
-    @Test
-    public void totalAreaIsSumOfAreasOfDifferentShapes()
-    {
-        assertEquals(49.14, sut.getTotalArea(new Rectangle(4, 2), new Rectangle(3, 4), new Circle(1), new Square(1), new Triangle(10, 5)), .0001);
+    @Test(testName = "6.5", description = "Verify sum of areas all figures")
+    public void testTotalAreaIsSumOfAreasOfDifferentShapes(){
+
+        LOG.info("@Test - testTotalAreaIsSumOfAreasOfDifferentShapes()");
+
+        assertThat(sut.getTotalArea(new Rectangle(4, 2), new Rectangle(3, 4),
+                new Circle(1), new Square(1), new Triangle(10, 5))).isEqualTo(49.1400);
     }
 
-    @Test
-    public void totalAreaIsRoundedTo2Decimals()
-    {
-        assertEquals(4.45, sut.getTotalArea(new Rectangle(1.112, 2), new Rectangle(1.111, 2)), .0001);
+    @Test(testName = "6.6", description = "Verify area is rounded to 2 decimals")
+    public void testTotalAreaIsRoundedTo2Decimals(){
+
+        LOG.info("@Test - testTotalAreaIsRoundedTo2Decimals()");
+
+        assertThat(sut.getTotalArea(new Rectangle(1.112, 2), new Rectangle(1.111, 2))).isEqualTo(4.45);
     }
 
-    @Test
-    public void totalAreaIs0WhenThereAreNoShapes()
-    {
-        assertEquals(0, sut.getTotalArea(), .0001);
+    @Test(testName = "6.7", description = "Verify no shapes given")
+    public void testTotalAreaIs0WhenThereAreNoShapes(){
+
+        LOG.info("@Test - testTotalAreaIs0WhenThereAreNoShapes()");
+
+        assertThat(sut.getTotalArea()).isEqualTo(0);
     }
 }
